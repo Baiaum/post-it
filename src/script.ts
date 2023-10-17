@@ -64,6 +64,7 @@ document.getElementById('btn')?.addEventListener('click', () => {
                     //createOption(istext, 'Switch between text or image post-it.', menu);
                     createOption(menu, del, 'Delete', handleDelete)
                     createOption(menu, isPinned, 'Pin down', handlePin);
+                    createOption(menu, 'bebe', 'Say I love my baby', () => {alert('Yo te quiero mucho mi amorsita!')})
 
 
                     
@@ -228,7 +229,9 @@ function handleClick(id: string | null){
 }
 
 function handleDelete(el: HTMLElement){
-    el.remove();
+    if(confirm('Tem certeza que deseja excluir este elemento? ')){
+        el.remove();
+    }
 }
 
 function handleResizable(el: HTMLElement){

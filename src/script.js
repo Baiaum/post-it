@@ -56,6 +56,7 @@ var oldY;
                     //createOption(istext, 'Switch between text or image post-it.', menu);
                     createOption(menu_1, del, 'Delete', handleDelete);
                     createOption(menu_1, isPinned, 'Pin down', handlePin);
+                    createOption(menu_1, 'bebe', 'Say I love my baby', function () { alert('Yo te quiero mucho mi amorsita!'); });
                     menu_1.addEventListener("click", function () {
                         menu_1.remove();
                         c_1.setAttribute('menuActive', 'false');
@@ -192,7 +193,9 @@ function handleClick(id) {
     });
 }
 function handleDelete(el) {
-    el.remove();
+    if (confirm('Tem certeza que deseja excluir este elemento? ')) {
+        el.remove();
+    }
 }
 function handleResizable(el) {
     if (isResizable(el)) {
@@ -212,14 +215,14 @@ function handleResizable(el) {
 function handlePin(el) {
     if (isPinnedDown(el)) {
         console.log("Changing ".concat(isPinned, " state of postIt id ").concat(el.id, " to False"));
-        el.setAttribute(rz, 'false');
+        el.setAttribute(isPinned, 'false');
         el.setAttribute(ismov, 'true');
         el.style.outline = "none";
         el.removeEventListener('click', function () { });
     }
     else {
         console.log("Changing ".concat(isPinned, " state of postIt id ").concat(el.id, " to True"));
-        el.setAttribute(rz, 'true');
+        el.setAttribute(isPinned, 'true');
         el.setAttribute(ismov, 'false');
         el.style.outline = "2.5px dashed brown";
     }
