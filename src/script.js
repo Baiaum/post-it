@@ -56,7 +56,7 @@ var oldY;
                     //createOption(istext, 'Switch between text or image post-it.', menu);
                     createOption(menu_1, del, 'Delete', handleDelete);
                     createOption(menu_1, isPinned, 'Pin down', handlePin);
-                    createOption(menu_1, 'bebe', 'Say I love my baby', function () { alert('Yo te quiero mucho mi amorsita!'); });
+                    createOption(menu_1, 'bebe', 'To my beloved one.', function () { alert('Yo te quiero mucho mi vida!'); });
                     menu_1.addEventListener("click", function () {
                         menu_1.remove();
                         c_1.setAttribute('menuActive', 'false');

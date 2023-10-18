@@ -64,7 +64,7 @@ document.getElementById('btn')?.addEventListener('click', () => {
                     //createOption(istext, 'Switch between text or image post-it.', menu);
                     createOption(menu, del, 'Delete', handleDelete)
                     createOption(menu, isPinned, 'Pin down', handlePin);
-                    createOption(menu, 'bebe', 'Say I love my baby', () => {alert('Yo te quiero mucho mi amorsita!')})
+                    createOption(menu, 'bebe', 'To my beloved one.', () => {alert('Yo te quiero mucho mi vida!')})
 
 
                     
