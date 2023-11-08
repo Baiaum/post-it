@@ -19,7 +19,6 @@ document.getElementById('btn')?.addEventListener('click', () => {
     if(b && color && h && w){
         let c = document.createElement("textarea");
         if(h.value != '' && w.value != ''){
-
             c.style.backgroundColor = color.value;
             c.style.width = w.value + 'px';
             c.style.height = h.value + 'px';
@@ -147,7 +146,7 @@ function defineOptAction(opt: string, optionRow: HTMLSpanElement, parentPostIt: 
 
 //HANDLING FUNCTIONS
 
-function handleResizing(el: HTMLDivElement, e: MouseEvent){
+function handleResizing(el: HTMLTextAreaElement, e: MouseEvent){
     let b = document.getElementById('root');
     b?.removeEventListener('mousemove', () => {})
     el.removeEventListener('click', () => {})
